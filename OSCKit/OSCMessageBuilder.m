@@ -17,9 +17,11 @@
     [self addString:[(NSString *)obj UTF8String]];
   } else if ([obj isKindOfClass:[NSValue class]]) {
     NSValue *val = (NSValue *)obj;
-    if ([OSCBridge value:val isOSCPackType:@encode(OSCFloat)]) {
+    if ([OSCBridge value:val isOSCPackType:"f"]) {
       [self addFloat:[OSCBridge floatFromValue:val]];
-    } else if ([OSCBridge value:val isOSCPackType:@encode(OSCInteger)]) {
+    } else if ([OSCBridge value:val isOSCPackType:"i"]) {
+      [self addInteger:[OSCBridge integerFromValue:val]];
+    } else if ([OSCBridge value:val isOSCPackType:"q"]) {
       [self addInteger:[OSCBridge integerFromValue:val]];
     } else {
       [[NSException

@@ -34,18 +34,25 @@
 }
 
 - (void)testPacket {
-  OSCMessage* message1 = [OSCMessage to:@"/hello" with:@[@1, @3.2f, @"hello"]];
+  OSCMessage* message1 = [OSCMessage to:@"/hello" with:@[@1, @524543432, @3.2f, @"hello"]];
   OSCMessage* message2 = [OSCProtocol unpackMessage:[OSCProtocol packMessage:message1]];
   
   XCTAssert([message1.address isEqualToString:message2.address]);
   
   NSNumber *arg1 = message2.arguments[0];
   NSNumber *arg2 = message2.arguments[1];
-  NSString *arg3 = message2.arguments[2];
+  NSNumber *arg3 = message2.arguments[2];
+  NSString *arg4 = message2.arguments[3];
 
   XCTAssert(arg1.intValue == 1);
-  XCTAssert(arg2.floatValue == 3);
-  XCTAssert([arg3 isEqualToString:@"hello"]);
+  XCTAssert(arg2.longValue == 524543432);
+  XCTAssert(arg3.floatValue == 3);
+  XCTAssert([arg4 isEqualToString:@"hello"]);
+}
+
+- (void)testJSON {
+  NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSJSONSerialization dataWithJSONObject:@[@1, @2] options:0 error:nil] options:0 error:nil];
+  [OSCMessage to:@"/hello" with:array];
 }
 
 - (void)testRoundtrip {

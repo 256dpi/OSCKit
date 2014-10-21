@@ -19,6 +19,8 @@ const static int BUFFER_SIZE = 1024 * 1024;
       packet << [OSCBridge floatFromValue:arg];
     } else if ([OSCBridge value:arg isOSCPackType:"i"]) {
       packet << [OSCBridge integerFromValue:arg];
+    } else if([OSCBridge value:arg isOSCPackType:"q"]) {
+      packet << [OSCBridge integerFromValue:arg];
     } else if ([OSCBridge value:arg isOSCPackType:"r*"]) {
       packet << [OSCBridge stringFromValue:arg];
     } else {
