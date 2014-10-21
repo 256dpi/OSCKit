@@ -44,14 +44,14 @@
   NSNumber *arg3 = message2.arguments[2];
   NSString *arg4 = message2.arguments[3];
 
-  XCTAssert(arg1.intValue == 1);
-  XCTAssert(arg2.longValue == 524543432);
-  XCTAssert(arg3.floatValue == 3);
+  XCTAssert([arg1 isEqualTo:@1]);
+  XCTAssert([arg2 isEqualTo:@524543432]);
+  XCTAssert([arg3 isEqualTo:@3.2f]);
   XCTAssert([arg4 isEqualToString:@"hello"]);
 }
 
 - (void)testJSON {
-  NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSJSONSerialization dataWithJSONObject:@[@1, @2] options:0 error:nil] options:0 error:nil];
+  NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSJSONSerialization dataWithJSONObject:@[@1, @2.5f, @"hello"] options:0 error:nil] options:0 error:nil];
   [OSCMessage to:@"/hello" with:array];
 }
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'OSCKit'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.summary = 'OSC protocol implementation.'
   s.homepage = 'https://github.com/256dpi/OSCKit'
   s.license = 'MIT'

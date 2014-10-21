@@ -3,11 +3,7 @@
 @implementation OSCMessage
 
 + (OSCMessage *)to:(NSString *)address with:(NSArray *)arguments {
-  OSCMessageBuilder *builder = [OSCMessageBuilder buildMessageTo:address];
-  for (NSObject *obj in arguments) {
-    [builder add:obj];
-  }
-  return [builder build];
+  return [[OSCMessage alloc] initWithAddress:address arguments:arguments];
 }
 
 - (id)initWithAddress:(NSString *)address arguments:(NSArray *)arguments {

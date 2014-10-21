@@ -21,7 +21,7 @@
   [self.socket bindToPort:port error:&error];
   
   if (error) {
-    [[NSException exceptionWithName:@"ListenerBindingException"
+    [[NSException exceptionWithName:@"OSCProtocolException"
                              reason:[NSString stringWithFormat:@"OSCServer could not bind: %@", error]
                            userInfo:@{@"error":error}] raise];
   } else {
@@ -32,7 +32,7 @@
   [self.socket beginReceiving:&error];
   
   if (error) {
-    [[NSException exceptionWithName:@"ListenerReceivingException"
+    [[NSException exceptionWithName:@"OSCProtocolException"
                              reason:[NSString stringWithFormat:@"OSCServer could not start receiving: %@", error]
                            userInfo:@{@"error":error}] raise];
   }

@@ -1,7 +1,6 @@
 #include "oscpack/OscOutboundPacketStream.h"
 #include "oscpack/OscReceivedElements.h"
 
-#import "OSCBridge.h"
 #import "OSCProtocol.h"
 
 const static int BUFFER_SIZE = 1024 * 1024;
@@ -14,18 +13,23 @@ const static int BUFFER_SIZE = 1024 * 1024;
   osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
   packet << osc::BeginMessage([message.address UTF8String]);
 
-  for (NSValue *arg in message.arguments) {
-    if ([OSCBridge value:arg isOSCPackType:"f"]) {
-      packet << [OSCBridge floatFromValue:arg];
-    } else if ([OSCBridge value:arg isOSCPackType:"i"]) {
-      packet << [OSCBridge integerFromValue:arg];
-    } else if([OSCBridge value:arg isOSCPackType:"q"]) {
-      packet << [OSCBridge integerFromValue:arg];
-    } else if ([OSCBridge value:arg isOSCPackType:"r*"]) {
-      packet << [OSCBridge stringFromValue:arg];
+  for (NSObject *arg in message.arguments) {
+    if([arg isKindOfClass:[NSString class]]) {
+      NSString *string = (NSString*)arg;
+      const char * stringValue = [string cStringUsingEncoding:NSUTF8StringEncoding];
+      packet << stringValue;
+    } else if([arg isKindOfClass:[NSNumber class]]) {
+      NSNumber *number = (NSNumber*)arg;
+      if(CFNumberIsFloatType((CFNumberRef)number)) {
+        Float32 floatValue = [number floatValue];
+        packet << floatValue;
+      } else {
+        SInt32 integerValue = [number intValue];
+        packet << integerValue;
+      }
     } else {
-      [[NSException exceptionWithName:@"OSCArgumentException"
-        reason:[NSString stringWithFormat:@"argument with encoding %s is not an int, float, or string", arg.objCType]
+      [[NSException exceptionWithName:@"OSCProtocolException"
+        reason:[NSString stringWithFormat:@"argument is not an int, float, or string"]
         userInfo:nil] raise];
     }
   }
@@ -57,8 +61,8 @@ const static int BUFFER_SIZE = 1024 * 1024;
       } else if (arg->IsString()) {
         [arguments addObject:[NSString stringWithUTF8String:arg->AsStringUnchecked()]];
       } else {
-        [[NSException exceptionWithName:@"OSCMessageReceiveException"
-                                 reason:@"message is not an int, float, or string"
+        [[NSException exceptionWithName:@"OSCProtocolException"
+                                 reason:@"argument is not an int, float, or string"
                                userInfo:nil] raise];
       }
     }

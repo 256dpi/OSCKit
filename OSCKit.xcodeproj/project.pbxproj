@@ -41,11 +41,6 @@
 		52B24D1619F660FE00970F0B /* OSCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B24D1419F660FE00970F0B /* OSCProtocol.h */; };
 		52B24D1719F660FE00970F0B /* OSCProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1519F660FE00970F0B /* OSCProtocol.mm */; };
 		52B24D1819F660FE00970F0B /* OSCProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1519F660FE00970F0B /* OSCProtocol.mm */; };
-		52B24D1B19F6780E00970F0B /* OSCMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */; };
-		52B24D1C19F6780E00970F0B /* OSCMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */; };
-		52B24D1D19F6780E00970F0B /* OSCMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */; };
-		52B24D2019F67C2B00970F0B /* OSCBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1F19F67C2B00970F0B /* OSCBridge.m */; };
-		52B24D2119F67C2B00970F0B /* OSCBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1F19F67C2B00970F0B /* OSCBridge.m */; };
 		E4B4DE2279C2CEDF02E3D0F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2530E228AA9AF0A5021C88AD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,10 +76,6 @@
 		52469BE519F5F1EA00398381 /* OSCKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCKitTests.m; sourceTree = "<group>"; };
 		52B24D1419F660FE00970F0B /* OSCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCProtocol.h; sourceTree = "<group>"; };
 		52B24D1519F660FE00970F0B /* OSCProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OSCProtocol.mm; sourceTree = "<group>"; };
-		52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessageBuilder.h; sourceTree = "<group>"; };
-		52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessageBuilder.m; sourceTree = "<group>"; };
-		52B24D1E19F67AC500970F0B /* OSCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCBridge.h; sourceTree = "<group>"; };
-		52B24D1F19F67C2B00970F0B /* OSCBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBridge.m; sourceTree = "<group>"; };
 		52E38CD819F6CEBC00175C00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		75888259F9DB5F8B072EB133 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2EB3AAD339BEC96B4D2613 /* Pods-OSCKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSCKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSCKitTests/Pods-OSCKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +136,6 @@
 				52E38CD819F6CEBC00175C00 /* README.md */,
 				52469BB219F5F1B200398381 /* oscpack */,
 				52469B9719F5F0D500398381 /* OSCKit.h */,
-				52B24D1E19F67AC500970F0B /* OSCBridge.h */,
-				52B24D1F19F67C2B00970F0B /* OSCBridge.m */,
 				52B24D1419F660FE00970F0B /* OSCProtocol.h */,
 				52B24D1519F660FE00970F0B /* OSCProtocol.mm */,
 				52469BC119F5F1B200398381 /* OSCServer.h */,
@@ -157,8 +146,6 @@
 				52469BAC19F5F1B200398381 /* OSCBundle.m */,
 				52469BB019F5F1B200398381 /* OSCMessage.h */,
 				52469BB119F5F1B200398381 /* OSCMessage.m */,
-				52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */,
-				52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */,
 			);
 			path = OSCKit;
 			sourceTree = "<group>";
@@ -221,7 +208,6 @@
 				52469BD319F5F1B200398381 /* OscOutboundPacketStream.h in Headers */,
 				52469BCB19F5F1B200398381 /* OSCMessage.h in Headers */,
 				52469BE119F5F1B200398381 /* OSCServer.h in Headers */,
-				52B24D1B19F6780E00970F0B /* OSCMessageBuilder.h in Headers */,
 				52469BCF19F5F1B200398381 /* OscException.h in Headers */,
 				52469B9819F5F0D500398381 /* OSCKit.h in Headers */,
 				52469BD019F5F1B200398381 /* OscHostEndianness.h in Headers */,
@@ -394,9 +380,7 @@
 				52469BD119F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */,
 				52B24D1719F660FE00970F0B /* OSCProtocol.mm in Sources */,
 				52469BD519F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */,
-				52B24D1C19F6780E00970F0B /* OSCMessageBuilder.m in Sources */,
 				52469BD819F5F1B200398381 /* OscReceivedElements.cpp in Sources */,
-				52B24D2019F67C2B00970F0B /* OSCBridge.m in Sources */,
 				52469BCC19F5F1B200398381 /* OSCMessage.m in Sources */,
 				52469BE219F5F1B200398381 /* OSCServer.m in Sources */,
 				52469BC519F5F1B200398381 /* OSCBundle.m in Sources */,
@@ -408,14 +392,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52469BDC19F5F1B200398381 /* OscTypes.cpp in Sources */,
-				52B24D1D19F6780E00970F0B /* OSCMessageBuilder.m in Sources */,
 				52B24D1819F660FE00970F0B /* OSCProtocol.mm in Sources */,
 				52469BC919F5F1B200398381 /* OSCClient.m in Sources */,
 				52469BD219F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */,
 				52469BD619F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */,
 				52469BD919F5F1B200398381 /* OscReceivedElements.cpp in Sources */,
 				52469BCD19F5F1B200398381 /* OSCMessage.m in Sources */,
-				52B24D2119F67C2B00970F0B /* OSCBridge.m in Sources */,
 				52469BE319F5F1B200398381 /* OSCServer.m in Sources */,
 				52469BE719F5F1EA00398381 /* OSCKitTests.m in Sources */,
 				52469BC619F5F1B200398381 /* OSCBundle.m in Sources */,

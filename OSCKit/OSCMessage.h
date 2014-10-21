@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
 
-#import "OSCMessageBuilder.h"
-
 @interface OSCMessage : NSObject
 
 @property (strong) NSString *address;
