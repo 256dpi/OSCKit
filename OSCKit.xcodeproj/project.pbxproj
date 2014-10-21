@@ -7,138 +7,246 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52735D4B19F451B000A8F08D /* OSCKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52735D4A19F451B000A8F08D /* OSCKit.h */; };
-		52735D6119F451D000A8F08D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 52735D5E19F451D000A8F08D /* LICENSE */; };
-		52735D6219F451D000A8F08D /* OSCKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 52735D5F19F451D000A8F08D /* OSCKit.podspec */; };
-		52735D6319F451D000A8F08D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 52735D6019F451D000A8F08D /* README.md */; };
-		52735D6519F452A200A8F08D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 52735D6419F452A200A8F08D /* Podfile */; };
-		7540943D02AC620C35594D6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62170D8D5212149162A947B /* libPods.a */; };
+		13056CB7D48CDC8C30DA4D66 /* libPods-OSCKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F2F1B39B2F49353713C27 /* libPods-OSCKitTests.a */; };
+		52469B9819F5F0D500398381 /* OSCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469B9719F5F0D500398381 /* OSCKit.h */; };
+		52469BC419F5F1B200398381 /* OSCBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BAB19F5F1B200398381 /* OSCBundle.h */; };
+		52469BC519F5F1B200398381 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAC19F5F1B200398381 /* OSCBundle.m */; };
+		52469BC619F5F1B200398381 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAC19F5F1B200398381 /* OSCBundle.m */; };
+		52469BC719F5F1B200398381 /* OSCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BAD19F5F1B200398381 /* OSCClient.h */; };
+		52469BC819F5F1B200398381 /* OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAE19F5F1B200398381 /* OSCClient.m */; };
+		52469BC919F5F1B200398381 /* OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAE19F5F1B200398381 /* OSCClient.m */; };
+		52469BCB19F5F1B200398381 /* OSCMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB019F5F1B200398381 /* OSCMessage.h */; };
+		52469BCC19F5F1B200398381 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB119F5F1B200398381 /* OSCMessage.m */; };
+		52469BCD19F5F1B200398381 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB119F5F1B200398381 /* OSCMessage.m */; };
+		52469BCE19F5F1B200398381 /* MessageMappingOscPacketListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB319F5F1B200398381 /* MessageMappingOscPacketListener.h */; };
+		52469BCF19F5F1B200398381 /* OscException.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB419F5F1B200398381 /* OscException.h */; };
+		52469BD019F5F1B200398381 /* OscHostEndianness.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB519F5F1B200398381 /* OscHostEndianness.h */; };
+		52469BD119F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB619F5F1B200398381 /* OscOutboundPacketStream.cpp */; };
+		52469BD219F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB619F5F1B200398381 /* OscOutboundPacketStream.cpp */; };
+		52469BD319F5F1B200398381 /* OscOutboundPacketStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB719F5F1B200398381 /* OscOutboundPacketStream.h */; };
+		52469BD419F5F1B200398381 /* OscPacketListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BB819F5F1B200398381 /* OscPacketListener.h */; };
+		52469BD519F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB919F5F1B200398381 /* OscPrintReceivedElements.cpp */; };
+		52469BD619F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BB919F5F1B200398381 /* OscPrintReceivedElements.cpp */; };
+		52469BD719F5F1B200398381 /* OscPrintReceivedElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BBA19F5F1B200398381 /* OscPrintReceivedElements.h */; };
+		52469BD819F5F1B200398381 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BBB19F5F1B200398381 /* OscReceivedElements.cpp */; };
+		52469BD919F5F1B200398381 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BBB19F5F1B200398381 /* OscReceivedElements.cpp */; };
+		52469BDA19F5F1B200398381 /* OscReceivedElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BBC19F5F1B200398381 /* OscReceivedElements.h */; };
+		52469BDB19F5F1B200398381 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BBD19F5F1B200398381 /* OscTypes.cpp */; };
+		52469BDC19F5F1B200398381 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52469BBD19F5F1B200398381 /* OscTypes.cpp */; };
+		52469BDD19F5F1B200398381 /* OscTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BBE19F5F1B200398381 /* OscTypes.h */; };
+		52469BE119F5F1B200398381 /* OSCServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BC119F5F1B200398381 /* OSCServer.h */; };
+		52469BE219F5F1B200398381 /* OSCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BC219F5F1B200398381 /* OSCServer.m */; };
+		52469BE319F5F1B200398381 /* OSCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BC219F5F1B200398381 /* OSCServer.m */; };
+		52469BE719F5F1EA00398381 /* OSCKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BE519F5F1EA00398381 /* OSCKitTests.m */; };
+		52B24D1619F660FE00970F0B /* OSCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B24D1419F660FE00970F0B /* OSCProtocol.h */; };
+		52B24D1719F660FE00970F0B /* OSCProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1519F660FE00970F0B /* OSCProtocol.mm */; };
+		52B24D1819F660FE00970F0B /* OSCProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1519F660FE00970F0B /* OSCProtocol.mm */; };
+		52B24D1B19F6780E00970F0B /* OSCMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */; };
+		52B24D1C19F6780E00970F0B /* OSCMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */; };
+		52B24D1D19F6780E00970F0B /* OSCMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */; };
+		52B24D2019F67C2B00970F0B /* OSCBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1F19F67C2B00970F0B /* OSCBridge.m */; };
+		52B24D2119F67C2B00970F0B /* OSCBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B24D1F19F67C2B00970F0B /* OSCBridge.m */; };
+		E4B4DE2279C2CEDF02E3D0F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2530E228AA9AF0A5021C88AD /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		52735D4519F451B000A8F08D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				52735D4B19F451B000A8F08D /* OSCKit.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		43ABE87329637C1679F7F147 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		52735D4719F451B000A8F08D /* libOSCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		52735D4A19F451B000A8F08D /* OSCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCKit.h; sourceTree = "<group>"; };
-		52735D5219F451B000A8F08D /* OSCKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52735D5519F451B000A8F08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = OSCKitTests/Info.plist; sourceTree = SOURCE_ROOT; };
-		52735D5E19F451D000A8F08D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		52735D5F19F451D000A8F08D /* OSCKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OSCKit.podspec; sourceTree = SOURCE_ROOT; };
-		52735D6019F451D000A8F08D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		52735D6419F452A200A8F08D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D62170D8D5212149162A947B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDEFC0689D3D69D951F75E33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		14355D5C74C5F610FC9AFFD7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1BEC9C18EBCA35054266F6B0 /* Pods-OSCKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSCKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSCKitTests/Pods-OSCKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		2530E228AA9AF0A5021C88AD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1F2F1B39B2F49353713C27 /* libPods-OSCKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OSCKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52469B9419F5F0D500398381 /* libOSCKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libOSCKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		52469B9719F5F0D500398381 /* OSCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCKit.h; sourceTree = "<group>"; };
+		52469B9F19F5F0D500398381 /* OSCKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52469BA219F5F0D500398381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52469BAB19F5F1B200398381 /* OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBundle.h; sourceTree = "<group>"; };
+		52469BAC19F5F1B200398381 /* OSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBundle.m; sourceTree = "<group>"; };
+		52469BAD19F5F1B200398381 /* OSCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCClient.h; sourceTree = "<group>"; };
+		52469BAE19F5F1B200398381 /* OSCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCClient.m; sourceTree = "<group>"; };
+		52469BB019F5F1B200398381 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		52469BB119F5F1B200398381 /* OSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessage.m; sourceTree = "<group>"; };
+		52469BB319F5F1B200398381 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageMappingOscPacketListener.h; sourceTree = "<group>"; };
+		52469BB419F5F1B200398381 /* OscException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscException.h; sourceTree = "<group>"; };
+		52469BB519F5F1B200398381 /* OscHostEndianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscHostEndianness.h; sourceTree = "<group>"; };
+		52469BB619F5F1B200398381 /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscOutboundPacketStream.cpp; sourceTree = "<group>"; };
+		52469BB719F5F1B200398381 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscOutboundPacketStream.h; sourceTree = "<group>"; };
+		52469BB819F5F1B200398381 /* OscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPacketListener.h; sourceTree = "<group>"; };
+		52469BB919F5F1B200398381 /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscPrintReceivedElements.cpp; sourceTree = "<group>"; };
+		52469BBA19F5F1B200398381 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPrintReceivedElements.h; sourceTree = "<group>"; };
+		52469BBB19F5F1B200398381 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscReceivedElements.cpp; sourceTree = "<group>"; };
+		52469BBC19F5F1B200398381 /* OscReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscReceivedElements.h; sourceTree = "<group>"; };
+		52469BBD19F5F1B200398381 /* OscTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscTypes.cpp; sourceTree = "<group>"; };
+		52469BBE19F5F1B200398381 /* OscTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscTypes.h; sourceTree = "<group>"; };
+		52469BC119F5F1B200398381 /* OSCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCServer.h; sourceTree = "<group>"; };
+		52469BC219F5F1B200398381 /* OSCServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCServer.m; sourceTree = "<group>"; };
+		52469BE519F5F1EA00398381 /* OSCKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCKitTests.m; sourceTree = "<group>"; };
+		52B24D1419F660FE00970F0B /* OSCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCProtocol.h; sourceTree = "<group>"; };
+		52B24D1519F660FE00970F0B /* OSCProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OSCProtocol.mm; sourceTree = "<group>"; };
+		52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessageBuilder.h; sourceTree = "<group>"; };
+		52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessageBuilder.m; sourceTree = "<group>"; };
+		52B24D1E19F67AC500970F0B /* OSCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCBridge.h; sourceTree = "<group>"; };
+		52B24D1F19F67C2B00970F0B /* OSCBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBridge.m; sourceTree = "<group>"; };
+		52E38CD819F6CEBC00175C00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		75888259F9DB5F8B072EB133 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BB2EB3AAD339BEC96B4D2613 /* Pods-OSCKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSCKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSCKitTests/Pods-OSCKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52735D4419F451B000A8F08D /* Frameworks */ = {
+		52469B9119F5F0D500398381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7540943D02AC620C35594D6E /* libPods.a in Frameworks */,
+				E4B4DE2279C2CEDF02E3D0F4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52735D4F19F451B000A8F08D /* Frameworks */ = {
+		52469B9C19F5F0D500398381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13056CB7D48CDC8C30DA4D66 /* libPods-OSCKitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0128F8C1A6DC7C773325CB48 /* Frameworks */ = {
+		1989C8B488C06C89B62047DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D62170D8D5212149162A947B /* libPods.a */,
+				2530E228AA9AF0A5021C88AD /* libPods.a */,
+				3C1F2F1B39B2F49353713C27 /* libPods-OSCKitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		52735D3E19F451B000A8F08D = {
+		52469B8B19F5F0D500398381 = {
 			isa = PBXGroup;
 			children = (
-				52735D5419F451B000A8F08D /* Supporting Files */,
-				52735D4919F451B000A8F08D /* OSCKit */,
-				52735D5319F451B000A8F08D /* OSCKitTests */,
-				52735D4819F451B000A8F08D /* Products */,
-				E6B68FBB0335A5ED6162C9E4 /* Pods */,
-				0128F8C1A6DC7C773325CB48 /* Frameworks */,
+				52469B9619F5F0D500398381 /* OSCKit */,
+				52469BA019F5F0D500398381 /* OSCKitTests */,
+				52469B9519F5F0D500398381 /* Products */,
+				68A82322BBE2CC95B78F3C6E /* Pods */,
+				1989C8B488C06C89B62047DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		52735D4819F451B000A8F08D /* Products */ = {
+		52469B9519F5F0D500398381 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52735D4719F451B000A8F08D /* libOSCKit.a */,
-				52735D5219F451B000A8F08D /* OSCKitTests.xctest */,
+				52469B9419F5F0D500398381 /* libOSCKit.dylib */,
+				52469B9F19F5F0D500398381 /* OSCKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52735D4919F451B000A8F08D /* OSCKit */ = {
+		52469B9619F5F0D500398381 /* OSCKit */ = {
 			isa = PBXGroup;
 			children = (
-				52735D4A19F451B000A8F08D /* OSCKit.h */,
+				52E38CD819F6CEBC00175C00 /* README.md */,
+				52469BB219F5F1B200398381 /* oscpack */,
+				52469B9719F5F0D500398381 /* OSCKit.h */,
+				52B24D1E19F67AC500970F0B /* OSCBridge.h */,
+				52B24D1F19F67C2B00970F0B /* OSCBridge.m */,
+				52B24D1419F660FE00970F0B /* OSCProtocol.h */,
+				52B24D1519F660FE00970F0B /* OSCProtocol.mm */,
+				52469BC119F5F1B200398381 /* OSCServer.h */,
+				52469BC219F5F1B200398381 /* OSCServer.m */,
+				52469BAD19F5F1B200398381 /* OSCClient.h */,
+				52469BAE19F5F1B200398381 /* OSCClient.m */,
+				52469BAB19F5F1B200398381 /* OSCBundle.h */,
+				52469BAC19F5F1B200398381 /* OSCBundle.m */,
+				52469BB019F5F1B200398381 /* OSCMessage.h */,
+				52469BB119F5F1B200398381 /* OSCMessage.m */,
+				52B24D1919F6780E00970F0B /* OSCMessageBuilder.h */,
+				52B24D1A19F6780E00970F0B /* OSCMessageBuilder.m */,
 			);
 			path = OSCKit;
 			sourceTree = "<group>";
 		};
-		52735D5319F451B000A8F08D /* OSCKitTests */ = {
+		52469BA019F5F0D500398381 /* OSCKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				52735D5519F451B000A8F08D /* Info.plist */,
+				52469BA119F5F0D500398381 /* Supporting Files */,
+				52469BE519F5F1EA00398381 /* OSCKitTests.m */,
 			);
 			path = OSCKitTests;
 			sourceTree = "<group>";
 		};
-		52735D5419F451B000A8F08D /* Supporting Files */ = {
+		52469BA119F5F0D500398381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				52735D6419F452A200A8F08D /* Podfile */,
-				52735D5E19F451D000A8F08D /* LICENSE */,
-				52735D5F19F451D000A8F08D /* OSCKit.podspec */,
-				52735D6019F451D000A8F08D /* README.md */,
+				52469BA219F5F0D500398381 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			path = OSCKitTests;
 			sourceTree = "<group>";
 		};
-		E6B68FBB0335A5ED6162C9E4 /* Pods */ = {
+		52469BB219F5F1B200398381 /* oscpack */ = {
 			isa = PBXGroup;
 			children = (
-				43ABE87329637C1679F7F147 /* Pods.debug.xcconfig */,
-				EDEFC0689D3D69D951F75E33 /* Pods.release.xcconfig */,
+				52469BB319F5F1B200398381 /* MessageMappingOscPacketListener.h */,
+				52469BB419F5F1B200398381 /* OscException.h */,
+				52469BB519F5F1B200398381 /* OscHostEndianness.h */,
+				52469BB619F5F1B200398381 /* OscOutboundPacketStream.cpp */,
+				52469BB719F5F1B200398381 /* OscOutboundPacketStream.h */,
+				52469BB819F5F1B200398381 /* OscPacketListener.h */,
+				52469BB919F5F1B200398381 /* OscPrintReceivedElements.cpp */,
+				52469BBA19F5F1B200398381 /* OscPrintReceivedElements.h */,
+				52469BBB19F5F1B200398381 /* OscReceivedElements.cpp */,
+				52469BBC19F5F1B200398381 /* OscReceivedElements.h */,
+				52469BBD19F5F1B200398381 /* OscTypes.cpp */,
+				52469BBE19F5F1B200398381 /* OscTypes.h */,
+			);
+			path = oscpack;
+			sourceTree = "<group>";
+		};
+		68A82322BBE2CC95B78F3C6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75888259F9DB5F8B072EB133 /* Pods.debug.xcconfig */,
+				14355D5C74C5F610FC9AFFD7 /* Pods.release.xcconfig */,
+				BB2EB3AAD339BEC96B4D2613 /* Pods-OSCKitTests.debug.xcconfig */,
+				1BEC9C18EBCA35054266F6B0 /* Pods-OSCKitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		52469B9219F5F0D500398381 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52469BC419F5F1B200398381 /* OSCBundle.h in Headers */,
+				52469BD319F5F1B200398381 /* OscOutboundPacketStream.h in Headers */,
+				52469BCB19F5F1B200398381 /* OSCMessage.h in Headers */,
+				52469BE119F5F1B200398381 /* OSCServer.h in Headers */,
+				52B24D1B19F6780E00970F0B /* OSCMessageBuilder.h in Headers */,
+				52469BCF19F5F1B200398381 /* OscException.h in Headers */,
+				52469B9819F5F0D500398381 /* OSCKit.h in Headers */,
+				52469BD019F5F1B200398381 /* OscHostEndianness.h in Headers */,
+				52469BD719F5F1B200398381 /* OscPrintReceivedElements.h in Headers */,
+				52469BD419F5F1B200398381 /* OscPacketListener.h in Headers */,
+				52469BDA19F5F1B200398381 /* OscReceivedElements.h in Headers */,
+				52B24D1619F660FE00970F0B /* OSCProtocol.h in Headers */,
+				52469BC719F5F1B200398381 /* OSCClient.h in Headers */,
+				52469BDD19F5F1B200398381 /* OscTypes.h in Headers */,
+				52469BCE19F5F1B200398381 /* MessageMappingOscPacketListener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		52735D4619F451B000A8F08D /* OSCKit */ = {
+		52469B9319F5F0D500398381 /* OSCKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52735D5819F451B000A8F08D /* Build configuration list for PBXNativeTarget "OSCKit" */;
+			buildConfigurationList = 52469BA519F5F0D500398381 /* Build configuration list for PBXNativeTarget "OSCKit" */;
 			buildPhases = (
-				F2FE9183CBE11907A5737B89 /* Check Pods Manifest.lock */,
-				52735D4319F451B000A8F08D /* Sources */,
-				52735D4419F451B000A8F08D /* Frameworks */,
-				52735D4519F451B000A8F08D /* CopyFiles */,
-				5A04079A41C5796DA797D4E8 /* Copy Pods Resources */,
+				75A1351C1CA6FD536EFB1BEC /* Check Pods Manifest.lock */,
+				52469B9019F5F0D500398381 /* Sources */,
+				52469B9119F5F0D500398381 /* Frameworks */,
+				52469B9219F5F0D500398381 /* Headers */,
+				F3228B6278A595AA6B15C1FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,16 +254,18 @@
 			);
 			name = OSCKit;
 			productName = OSCKit;
-			productReference = 52735D4719F451B000A8F08D /* libOSCKit.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 52469B9419F5F0D500398381 /* libOSCKit.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
-		52735D5119F451B000A8F08D /* OSCKitTests */ = {
+		52469B9E19F5F0D500398381 /* OSCKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52735D5B19F451B000A8F08D /* Build configuration list for PBXNativeTarget "OSCKitTests" */;
+			buildConfigurationList = 52469BA819F5F0D500398381 /* Build configuration list for PBXNativeTarget "OSCKitTests" */;
 			buildPhases = (
-				52735D4E19F451B000A8F08D /* Sources */,
-				52735D4F19F451B000A8F08D /* Frameworks */,
-				52735D5019F451B000A8F08D /* Resources */,
+				4770A1F4AB5BB3295ADB897A /* Check Pods Manifest.lock */,
+				52469B9B19F5F0D500398381 /* Sources */,
+				52469B9C19F5F0D500398381 /* Frameworks */,
+				52469B9D19F5F0D500398381 /* Resources */,
+				B93B93CBA2636526D564F5A9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,74 +273,56 @@
 			);
 			name = OSCKitTests;
 			productName = OSCKitTests;
-			productReference = 52735D5219F451B000A8F08D /* OSCKitTests.xctest */;
+			productReference = 52469B9F19F5F0D500398381 /* OSCKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		52735D3F19F451B000A8F08D /* Project object */ = {
+		52469B8C19F5F0D500398381 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = 256dpi;
 				TargetAttributes = {
-					52735D4619F451B000A8F08D = {
+					52469B9319F5F0D500398381 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
-					52735D5119F451B000A8F08D = {
+					52469B9E19F5F0D500398381 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 52735D4219F451B000A8F08D /* Build configuration list for PBXProject "OSCKit" */;
+			buildConfigurationList = 52469B8F19F5F0D500398381 /* Build configuration list for PBXProject "OSCKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 52735D3E19F451B000A8F08D;
-			productRefGroup = 52735D4819F451B000A8F08D /* Products */;
+			mainGroup = 52469B8B19F5F0D500398381;
+			productRefGroup = 52469B9519F5F0D500398381 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52735D4619F451B000A8F08D /* OSCKit */,
-				52735D5119F451B000A8F08D /* OSCKitTests */,
+				52469B9319F5F0D500398381 /* OSCKit */,
+				52469B9E19F5F0D500398381 /* OSCKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52735D5019F451B000A8F08D /* Resources */ = {
+		52469B9D19F5F0D500398381 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52735D6519F452A200A8F08D /* Podfile in Resources */,
-				52735D6119F451D000A8F08D /* LICENSE in Resources */,
-				52735D6219F451D000A8F08D /* OSCKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A04079A41C5796DA797D4E8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2FE9183CBE11907A5737B89 /* Check Pods Manifest.lock */ = {
+		4770A1F4AB5BB3295ADB897A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,28 +337,95 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		52735D4319F451B000A8F08D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		75A1351C1CA6FD536EFB1BEC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-		52735D4E19F451B000A8F08D /* Sources */ = {
+		B93B93CBA2636526D564F5A9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OSCKitTests/Pods-OSCKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3228B6278A595AA6B15C1FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52469B9019F5F0D500398381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52735D6319F451D000A8F08D /* README.md in Sources */,
+				52469BDB19F5F1B200398381 /* OscTypes.cpp in Sources */,
+				52469BC819F5F1B200398381 /* OSCClient.m in Sources */,
+				52469BD119F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */,
+				52B24D1719F660FE00970F0B /* OSCProtocol.mm in Sources */,
+				52469BD519F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */,
+				52B24D1C19F6780E00970F0B /* OSCMessageBuilder.m in Sources */,
+				52469BD819F5F1B200398381 /* OscReceivedElements.cpp in Sources */,
+				52B24D2019F67C2B00970F0B /* OSCBridge.m in Sources */,
+				52469BCC19F5F1B200398381 /* OSCMessage.m in Sources */,
+				52469BE219F5F1B200398381 /* OSCServer.m in Sources */,
+				52469BC519F5F1B200398381 /* OSCBundle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52469B9B19F5F0D500398381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52469BDC19F5F1B200398381 /* OscTypes.cpp in Sources */,
+				52B24D1D19F6780E00970F0B /* OSCMessageBuilder.m in Sources */,
+				52B24D1819F660FE00970F0B /* OSCProtocol.mm in Sources */,
+				52469BC919F5F1B200398381 /* OSCClient.m in Sources */,
+				52469BD219F5F1B200398381 /* OscOutboundPacketStream.cpp in Sources */,
+				52469BD619F5F1B200398381 /* OscPrintReceivedElements.cpp in Sources */,
+				52469BD919F5F1B200398381 /* OscReceivedElements.cpp in Sources */,
+				52469BCD19F5F1B200398381 /* OSCMessage.m in Sources */,
+				52B24D2119F67C2B00970F0B /* OSCBridge.m in Sources */,
+				52469BE319F5F1B200398381 /* OSCServer.m in Sources */,
+				52469BE719F5F1EA00398381 /* OSCKitTests.m in Sources */,
+				52469BC619F5F1B200398381 /* OSCBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		52735D5619F451B000A8F08D /* Debug */ = {
+		52469BA319F5F0D500398381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -299,15 +458,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited)";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		52735D5719F451B000A8F08D /* Release */ = {
+		52469BA419F5F0D500398381 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -325,6 +483,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -334,39 +493,45 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited)";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		52735D5919F451B000A8F08D /* Debug */ = {
+		52469BA619F5F0D500398381 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43ABE87329637C1679F7F147 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 75888259F9DB5F8B072EB133 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		52735D5A19F451B000A8F08D /* Release */ = {
+		52469BA719F5F0D500398381 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDEFC0689D3D69D951F75E33 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 14355D5C74C5F610FC9AFFD7 /* Pods.release.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		52735D5C19F451B000A8F08D /* Debug */ = {
+		52469BA919F5F0D500398381 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2EB3AAD339BEC96B4D2613 /* Pods-OSCKitTests.debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -374,20 +539,24 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = OSCKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		52735D5D19F451B000A8F08D /* Release */ = {
+		52469BAA19F5F0D500398381 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEC9C18EBCA35054266F6B0 /* Pods-OSCKitTests.release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = OSCKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -395,34 +564,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52735D4219F451B000A8F08D /* Build configuration list for PBXProject "OSCKit" */ = {
+		52469B8F19F5F0D500398381 /* Build configuration list for PBXProject "OSCKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52735D5619F451B000A8F08D /* Debug */,
-				52735D5719F451B000A8F08D /* Release */,
+				52469BA319F5F0D500398381 /* Debug */,
+				52469BA419F5F0D500398381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52735D5819F451B000A8F08D /* Build configuration list for PBXNativeTarget "OSCKit" */ = {
+		52469BA519F5F0D500398381 /* Build configuration list for PBXNativeTarget "OSCKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52735D5919F451B000A8F08D /* Debug */,
-				52735D5A19F451B000A8F08D /* Release */,
+				52469BA619F5F0D500398381 /* Debug */,
+				52469BA719F5F0D500398381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52735D5B19F451B000A8F08D /* Build configuration list for PBXNativeTarget "OSCKitTests" */ = {
+		52469BA819F5F0D500398381 /* Build configuration list for PBXNativeTarget "OSCKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52735D5C19F451B000A8F08D /* Debug */,
-				52735D5D19F451B000A8F08D /* Release */,
+				52469BA919F5F0D500398381 /* Debug */,
+				52469BAA19F5F0D500398381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 52735D3F19F451B000A8F08D /* Project object */;
+	rootObject = 52469B8C19F5F0D500398381 /* Project object */;
 }

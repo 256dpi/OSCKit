@@ -16,15 +16,15 @@ pod 'OSCKit'
     
 ## Usage
 
-Create a server:
+Receiving messages:
 
 ```objc
 OSCServer *server = [[OSCServer alloc] init];
 server.delegate = self;
-[server listen:@"udp://0.0.0.0:8000"];
+[server listen:8000];
 ```
 
-Delegate method:
+Handling messages:
 
 ```objc
 - (void)handleMessage:(OSCMessage*)message {
@@ -32,12 +32,13 @@ Delegate method:
 }
 ```
 
-Using the client:
+Sending messages:
 
 ```objc
 OSCClient *client = [[OSCClient alloc] init];
+
+OSCMessage *message = [OSCMessage to:@"/hello" with:@[@1, @"cool", @0.5f]]
 [client sendMessage:message to:@"udp://localhost:8000"];
-[client sendBundle:bundle to:@"udp://localhost:8000"];
 ```
 
 ## Author

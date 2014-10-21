@@ -1,10 +1,13 @@
 PODS:
   - CocoaAsyncSocket (7.3.5)
+  - XCTAsyncTestCase (0.1.0)
 
 DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.3)
+  - XCTAsyncTestCase
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 45bdbbc1c0a5ed0640ff4c42af325ba43a2f099a
+  XCTAsyncTestCase: 05c35ff59afc379911544e7452d48af186c9c5a2
 
 COCOAPODS: 0.34.4
