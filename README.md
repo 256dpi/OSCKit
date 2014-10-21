@@ -1,5 +1,7 @@
 # OSCKit
 
+**obj-c OSC protocol implementation**
+
 [![Version](https://img.shields.io/cocoapods/v/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
 [![License](https://img.shields.io/cocoapods/l/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
 [![Platform](https://img.shields.io/cocoapods/p/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
@@ -8,7 +10,9 @@
 
 OSCKit is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
-    pod "OSCKit"
+```ruby
+pod 'OSCKit'
+```
     
 ## Usage
 
@@ -20,7 +24,7 @@ server.delegate = self;
 [server listen:@"udp://0.0.0.0:8000"];
 ```
 
-Delegeate method:
+Delegate method:
 
 ```objc
 - (void)handleMessage:(OSCMessage*)message {
