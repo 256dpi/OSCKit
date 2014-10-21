@@ -4,17 +4,37 @@
 [![License](https://img.shields.io/cocoapods/l/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
 [![Platform](https://img.shields.io/cocoapods/p/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 OSCKit is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
     pod "OSCKit"
+    
+## Usage
+
+Create a server:
+
+```objc
+OSCServer *server = [[OSCServer alloc] init];
+server.delegate = self;
+[server listen:@"udp://0.0.0.0:8000"];
+```
+
+Delegeate method:
+
+```objc
+- (void)handleMessage:(OSCMessage*)message {
+  // do something with the message
+}
+```
+
+Using the client:
+
+```objc
+OSCClient *client = [[OSCClient alloc] init];
+[client sendMessage:message to:@"udp://localhost:8000"];
+[client sendBundle:bundle to:@"udp://localhost:8000"];
+```
 
 ## Author
 
