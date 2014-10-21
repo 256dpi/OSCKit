@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.requires_arc = true
 
-  s.source_files = 'OSCKit'
-  s.public_header_files = 'OSCKit/**/*.h'
+  s.source_files = 'OSCKit/**/*.{h,m,mm,cpp}'
+  s.public_header_files = 'OSCKit/*.h'
 
   s.dependency 'CocoaAsyncSocket', '~> 7.3'
 end

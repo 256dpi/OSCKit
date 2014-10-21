@@ -1,6 +1,6 @@
 # OSCKit
 
-**obj-c OSC protocol implementation**
+**objc OSC protocol implementation**
 
 [![Version](https://img.shields.io/cocoapods/v/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
 [![License](https://img.shields.io/cocoapods/l/OSCKit.svg?style=flat)](http://cocoadocs.org/docsets/OSCKit)
