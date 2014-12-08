@@ -8,5 +8,6 @@
 + (OSCMessage*)to:(NSString*)address with:(NSArray*)arguments;
 
 - (id)initWithAddress:(NSString *)address arguments:(NSArray *)arguments;
+- (NSInteger)estimatedSize;
 
 @end
