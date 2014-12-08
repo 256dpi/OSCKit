@@ -3,7 +3,7 @@
 
 #import "OSCProtocol.h"
 
-const static int BUFFER_SIZE = 1024 * 1024;
+const static int BUFFER_SIZE = 512 * 1024;
 
 @implementation OSCProtocol
 
