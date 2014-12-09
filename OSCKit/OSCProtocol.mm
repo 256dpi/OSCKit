@@ -3,14 +3,14 @@
 
 #import "OSCProtocol.h"
 
-const static int BUFFER_SIZE = 1024 * 1024;
-
 @implementation OSCProtocol
 
 + (NSData *)packMessage:(OSCMessage *)message {
-  char buffer[BUFFER_SIZE];
+  NSInteger bufferSize = 512 + message.estimatedSize;
 
-  osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
+  char * buffer = (char*)malloc(bufferSize * sizeof(char));
+
+  osc::OutboundPacketStream packet(buffer, bufferSize);
   packet << osc::BeginMessage([message.address UTF8String]);
 
   for (NSObject *arg in message.arguments) {
@@ -35,8 +35,12 @@ const static int BUFFER_SIZE = 1024 * 1024;
   }
 
   packet << osc::EndMessage;
+  
+  NSData *data = [NSData dataWithBytes:packet.Data() length:packet.Size()];
+  
+  free(buffer);
 
-  return [NSData dataWithBytes:packet.Data() length:packet.Size()];
+  return data;
 }
 
 + (OSCMessage*)unpackMessage:(NSData*)data {
