@@ -1,5 +1,9 @@
 #import "OSCMessage.h"
 
+NSInteger roundUp4(NSInteger value) {
+  return ceil((float)value / 4.0) * 4;
+}
+
 @implementation OSCMessage
 
 + (OSCMessage *)to:(NSString *)address with:(NSArray *)arguments {
@@ -18,12 +22,14 @@
 }
 
 - (NSInteger)estimatedSize {
-  NSInteger size = [self.address lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+  NSInteger size = roundUp4([self.address lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + 1);
+  
+  size += roundUp4(self.arguments.count + 2); // type string with leading comma and null
   
   for (NSObject *arg in self.arguments) {
     if([arg isKindOfClass:[NSString class]]) {
       NSString *string = (NSString*)arg;
-      size += [string lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+      size += roundUp4([string lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + 1);
     } else if([arg isKindOfClass:[NSNumber class]]) {
       size += 4;
     } else {

@@ -50,6 +50,18 @@
   XCTAssert([arg4 isEqualToString:@"hello"]);
 }
 
+- (void)testAllocation {
+  NSMutableArray *array = [NSMutableArray array];
+  
+  for(int i=0; i < 255; i++) {
+    [array addObject:@"test!"];
+  }
+  
+  OSCMessage *message = [OSCMessage to:@"/test" with:array];
+  NSData *data = [OSCProtocol packMessage:message];
+  XCTAssertEqual(data.length, message.estimatedSize);
+}
+
 - (void)testJSON {
   NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSJSONSerialization dataWithJSONObject:@[@1, @2.5f, @"hello"] options:0 error:nil] options:0 error:nil];
   [OSCMessage to:@"/hello" with:array];
