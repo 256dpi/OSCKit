@@ -4,7 +4,9 @@
 
 @interface OSCProtocol : NSObject
 
+typedef void (^OSCMessageCallback)(OSCMessage*);
+
 + (NSData*)packMessage:(OSCMessage*)message;
-+ (OSCMessage*)unpackMessage:(NSData*)data;
++ (void)unpackMessages:(NSData*)data withCallback:(OSCMessageCallback)callback;
 
 @end
