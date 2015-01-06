@@ -61,4 +61,5 @@ OSCKit is available under the MIT license. See the LICENSE file for more info.
 
 ## Credits
 
-Source code taken from this repository to bootstrap development: https://github.com/heisters/iOS-oscpack
+- @heisters: Source code taken from his repository to bootstrap development: https://github.com/heisters/iOS-oscpack
+- @codeflows: Thanks for the pull requests, testings and improvements.
