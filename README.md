@@ -24,8 +24,6 @@ server.delegate = self;
 [server listen:8000];
 ```
 
-**Handling messages:**
-
 ```objc
 - (void)handleMessage:(OSCMessage*)message {
   // do something with the message
