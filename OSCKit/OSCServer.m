@@ -52,7 +52,10 @@
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(id)filterContext
 {
-  [self.delegate handleMessage:[OSCProtocol unpackMessage:data]];
+  [OSCProtocol unpackMessages:data withCallback:^(OSCMessage* message){
+    [self.delegate handleMessage:message];
+  }];
+;
 }
 
 @end

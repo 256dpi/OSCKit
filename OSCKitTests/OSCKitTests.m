@@ -35,7 +35,12 @@
 
 - (void)testPacket {
   OSCMessage* message1 = [OSCMessage to:@"/hello" with:@[@1, @524543432, @3.2f, @"hello"]];
-  OSCMessage* message2 = [OSCProtocol unpackMessage:[OSCProtocol packMessage:message1]];
+  NSData* packedMessage = [OSCProtocol packMessage:message1];
+  
+  __block OSCMessage* message2;
+  [OSCProtocol unpackMessages:packedMessage withCallback:^(OSCMessage* message){
+    message2 = message;
+  }];
   
   XCTAssert([message1.address isEqualToString:message2.address]);
   
