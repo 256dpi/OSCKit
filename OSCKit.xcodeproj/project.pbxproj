@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		13056CB7D48CDC8C30DA4D66 /* libPods-OSCKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F2F1B39B2F49353713C27 /* libPods-OSCKitTests.a */; };
 		52469B9819F5F0D500398381 /* OSCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469B9719F5F0D500398381 /* OSCKit.h */; };
-		52469BC419F5F1B200398381 /* OSCBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BAB19F5F1B200398381 /* OSCBundle.h */; };
-		52469BC519F5F1B200398381 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAC19F5F1B200398381 /* OSCBundle.m */; };
-		52469BC619F5F1B200398381 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAC19F5F1B200398381 /* OSCBundle.m */; };
 		52469BC719F5F1B200398381 /* OSCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 52469BAD19F5F1B200398381 /* OSCClient.h */; };
 		52469BC819F5F1B200398381 /* OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAE19F5F1B200398381 /* OSCClient.m */; };
 		52469BC919F5F1B200398381 /* OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52469BAE19F5F1B200398381 /* OSCClient.m */; };
@@ -53,8 +50,6 @@
 		52469B9719F5F0D500398381 /* OSCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCKit.h; sourceTree = "<group>"; };
 		52469B9F19F5F0D500398381 /* OSCKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52469BA219F5F0D500398381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52469BAB19F5F1B200398381 /* OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBundle.h; sourceTree = "<group>"; };
-		52469BAC19F5F1B200398381 /* OSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBundle.m; sourceTree = "<group>"; };
 		52469BAD19F5F1B200398381 /* OSCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCClient.h; sourceTree = "<group>"; };
 		52469BAE19F5F1B200398381 /* OSCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCClient.m; sourceTree = "<group>"; };
 		52469BB019F5F1B200398381 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
@@ -142,8 +137,6 @@
 				52469BC219F5F1B200398381 /* OSCServer.m */,
 				52469BAD19F5F1B200398381 /* OSCClient.h */,
 				52469BAE19F5F1B200398381 /* OSCClient.m */,
-				52469BAB19F5F1B200398381 /* OSCBundle.h */,
-				52469BAC19F5F1B200398381 /* OSCBundle.m */,
 				52469BB019F5F1B200398381 /* OSCMessage.h */,
 				52469BB119F5F1B200398381 /* OSCMessage.m */,
 			);
@@ -204,7 +197,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52469BC419F5F1B200398381 /* OSCBundle.h in Headers */,
 				52469BD319F5F1B200398381 /* OscOutboundPacketStream.h in Headers */,
 				52469BCB19F5F1B200398381 /* OSCMessage.h in Headers */,
 				52469BE119F5F1B200398381 /* OSCServer.h in Headers */,
@@ -383,7 +375,6 @@
 				52469BD819F5F1B200398381 /* OscReceivedElements.cpp in Sources */,
 				52469BCC19F5F1B200398381 /* OSCMessage.m in Sources */,
 				52469BE219F5F1B200398381 /* OSCServer.m in Sources */,
-				52469BC519F5F1B200398381 /* OSCBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +391,6 @@
 				52469BCD19F5F1B200398381 /* OSCMessage.m in Sources */,
 				52469BE319F5F1B200398381 /* OSCServer.m in Sources */,
 				52469BE719F5F1EA00398381 /* OSCKitTests.m in Sources */,
-				52469BC619F5F1B200398381 /* OSCBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

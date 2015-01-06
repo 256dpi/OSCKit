@@ -86,4 +86,22 @@
   [self waitForStatus:kXCTUnitWaitStatusSuccess timeout:2.0];
 }
 
+- (void)testBundles {
+  [self prepare];
+  
+  [self.client sendMessages:@[
+    [OSCMessage to:@"/hello" with:@[@1]],
+    [OSCMessage to:@"/hello" with:@[@2]],
+    [OSCMessage to:@"/hello" with:@[@3]]
+  ] to:@"udp://0.0.0.0:5555"];
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
+    sleep(1.0);
+    XCTAssert(self.receivedMessages.count == 3);
+    [self notify:kXCTUnitWaitStatusSuccess];
+  });
+
+  [self waitForStatus:kXCTUnitWaitStatusSuccess timeout:2.0];
+}
+
 @end

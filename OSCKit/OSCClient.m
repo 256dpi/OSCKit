@@ -25,12 +25,18 @@
                     tag:0];
 }
 
-- (void)sendBundle:(OSCBundle *)bundle to:(NSString *)uri {
-
-}
-
 - (void)dealloc {
   [self.socket close];
+}
+
+- (void)sendMessages:(NSArray *)messages to:(NSString *)uri {
+  NSURL* url = [NSURL URLWithString:uri];
+  
+  [self.socket sendData:[OSCProtocol packMessages:messages]
+                 toHost:url.host
+                   port:[url.port intValue]
+            withTimeout:-1
+                    tag:0];
 }
 
 #pragma mark GCDAsyncUdpSocketDelegate

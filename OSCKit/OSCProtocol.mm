@@ -11,21 +11,59 @@
   char * buffer = (char*)malloc(bufferSize * sizeof(char));
 
   osc::OutboundPacketStream packet(buffer, bufferSize);
-  packet << osc::BeginMessage([message.address UTF8String]);
+  
+  [self addMessageToOutputStream:packet andMessage:message];
+  
+  NSData *data = [NSData dataWithBytes:packet.Data() length:packet.Size()];
+  
+  free(buffer);
+
+  return data;
+}
+
++ (NSData *)packMessages:(NSArray *)messages {
+  NSInteger bufferSize = 16;
+  
+  for(OSCMessage* message in messages) {
+    bufferSize += 4;
+    bufferSize += message.estimatedSize;
+  }
+  
+  char * buffer = (char*)malloc(bufferSize * sizeof(char));
+  
+  osc::OutboundPacketStream packet(buffer, bufferSize);
+  
+  packet << osc::BeginBundleImmediate;
+  
+  for(OSCMessage* message in messages) {
+    [self addMessageToOutputStream:packet andMessage:message];
+  }
+  
+  packet << osc::EndBundle;
+  
+  NSData *data = [NSData dataWithBytes:packet.Data() length:packet.Size()];
+  
+  free(buffer);
+  
+  return data;
+}
+
++ (void)addMessageToOutputStream:(osc::OutboundPacketStream&)stream andMessage:(OSCMessage*)message {
+  stream << osc::BeginMessage([message.address UTF8String]);
 
   for (NSObject *arg in message.arguments) {
     if([arg isKindOfClass:[NSString class]]) {
       NSString *string = (NSString*)arg;
       const char * stringValue = [string cStringUsingEncoding:NSUTF8StringEncoding];
-      packet << stringValue;
+      stream << stringValue;
     } else if([arg isKindOfClass:[NSNumber class]]) {
       NSNumber *number = (NSNumber*)arg;
       if(CFNumberIsFloatType((CFNumberRef)number)) {
         Float32 floatValue = [number floatValue];
-        packet << floatValue;
+        stream << floatValue;
       } else {
         SInt32 integerValue = [number intValue];
-        packet << integerValue;
+        stream << integerValue;
       }
     } else {
       [[NSException exceptionWithName:@"OSCProtocolException"
@@ -34,13 +72,7 @@
     }
   }
 
-  packet << osc::EndMessage;
-  
-  NSData *data = [NSData dataWithBytes:packet.Data() length:packet.Size()];
-  
-  free(buffer);
-
-  return data;
+  stream << osc::EndMessage;
 }
 
 + (OSCMessage*)convertMessage:(const osc::ReceivedMessage&)message {
