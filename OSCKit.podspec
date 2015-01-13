@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'OSCKit'
-  s.version = '0.2.1'
+  s.version = '0.3.0'
   s.summary = 'OSC protocol implementation.'
   s.homepage = 'https://github.com/256dpi/OSCKit'
   s.license = 'MIT'
@@ -16,3 +16,8 @@ Pod::Spec.new do |s|
 
   s.dependency 'CocoaAsyncSocket', '~> 7.3'
 end
+
+# How to publish
+# git tag '0.3.0'
+# git push --tags
+# pod trunk push OSCKit.podspec 
