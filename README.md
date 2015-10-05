@@ -36,7 +36,7 @@ server.delegate = self;
 }
 ```
 
-Bundles are handled by the client automatically and yielded to the delegate.
+Bundles are handled by the server automatically and delegated using the same callback.
 
 **Sending messages:**
 
