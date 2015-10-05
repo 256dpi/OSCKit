@@ -13,6 +13,12 @@ OSCKit is available through [CocoaPods](http://cocoapods.org). To install it, si
 ```ruby
 pod 'OSCKit'
 ```
+
+Then import it and use it:
+
+```objc
+#import <OSCKit/OSCKit.h>
+```
     
 ## Usage
 
@@ -53,7 +59,7 @@ OSCMessage *message2 = [OSCMessage to:@"/world" with:@[@"crazy", @876]]
 
 ## Author
 
-Joël Gähwiler, joel.gaehwiler@gmail.com
+Joël Gähwiler, joel.gaehwiler@gmail.com
 
 ## License
 
