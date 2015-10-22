@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'OSCKit'
-  s.version = '0.3.2'
+  s.version = '0.3.4'
   s.summary = 'OSC protocol implementation.'
   s.homepage = 'https://github.com/256dpi/OSCKit'
   s.license = 'MIT'
@@ -20,4 +20,4 @@ end
 # How to publish
 # git tag '0.3.0'
 # git push --tags
-# pod trunk push OSCKit.podspec 
+# pod trunk push OSCKit.podspec
