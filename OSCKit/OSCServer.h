@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
+#import "CocoaAsyncSocket.h"
 
 #import "OSCMessage.h"
 
