@@ -1,13 +1,22 @@
 PODS:
-  - CocoaAsyncSocket (7.3.5)
-  - XCTAsyncTestCase (0.1.0)
+  - CocoaAsyncSocket (7.4.2)
+  - XCTAsyncTestCase (0.1.1)
 
 DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.3)
-  - XCTAsyncTestCase
+  - XCTAsyncTestCase (from `https://github.com/iheartradio/xctest-additions.git`)
+
+EXTERNAL SOURCES:
+  XCTAsyncTestCase:
+    :git: https://github.com/iheartradio/xctest-additions.git
+
+CHECKOUT OPTIONS:
+  XCTAsyncTestCase:
+    :commit: 2ed4b07c8a8ba6866641bb411e6cfd5221786501
+    :git: https://github.com/iheartradio/xctest-additions.git
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: 45bdbbc1c0a5ed0640ff4c42af325ba43a2f099a
-  XCTAsyncTestCase: 05c35ff59afc379911544e7452d48af186c9c5a2
+  CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
+  XCTAsyncTestCase: 1aed7ec7905cc37287be0869afec48b6dd9c51ad
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.39.0
