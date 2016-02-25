@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'OSCKit'
-  s.version = '0.3.4'
+  s.version = '0.3.5'
   s.summary = 'OSC protocol implementation.'
   s.homepage = 'https://github.com/256dpi/OSCKit'
   s.license = 'MIT'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'OSCKit/**/*.{h,m,mm,cpp}'
   s.public_header_files = 'OSCKit/*.h'
-  s.libraries = 'c++', 'stdc++' 
+  s.libraries = 'c++', 'stdc++'
 
   s.dependency 'CocoaAsyncSocket', '~> 7.3'
 end
