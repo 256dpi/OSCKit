@@ -22,13 +22,21 @@ Then import it and use it:
     
 ## Usage
 
-**Receiving messages:**
+Prepare the property in the header file:
 
 ```objc
-OSCServer *server = [[OSCServer alloc] init];
+@property (nonatomic, strong) OSCClient *client;
+```
+
+Initialize the server:
+
+```objc
+self.server = [[OSCServer alloc] init];
 server.delegate = self;
 [server listen:8000];
 ```
+
+Define delegate method:
 
 ```objc
 - (void)handleMessage:(OSCMessage*)message {
@@ -38,20 +46,16 @@ server.delegate = self;
 
 Bundles are handled by the server automatically and delegated using the same callback.
 
-**Sending messages:**
+Sending messages:
 
 ```objc
-OSCClient *client = [[OSCClient alloc] init];
-
 OSCMessage *message = [OSCMessage to:@"/hello" with:@[@1, @"cool", @0.5f]]
 [client sendMessage:message to:@"udp://localhost:8000"];
 ```
 
-**Sending bundles:**
+Sending bundles:
 
 ```objc
-OSCClient *client = [[OSCClient alloc] init];
-
 OSCMessage *message1 = [OSCMessage to:@"/hello" with:@[@1, @"cool", @0.5f]]
 OSCMessage *message2 = [OSCMessage to:@"/world" with:@[@"crazy", @876]]
 [client sendMessages:@[message1, message2] to:@"udp://localhost:8000"];
